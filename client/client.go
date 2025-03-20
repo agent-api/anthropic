@@ -4,8 +4,7 @@ import (
 	"context"
 	"log/slog"
 
-	"github.com/agent-api/core/types"
-
+	"github.com/agent-api/core"
 	"github.com/anthropics/anthropic-sdk-go"
 )
 
@@ -21,7 +20,7 @@ type AnthropicClient struct {
 
 type AnthropicClientOpts struct {
 	Logger *slog.Logger
-	Model  *types.Model
+	Model  *core.Model
 }
 
 func NewClient(ctx context.Context, opts *AnthropicClientOpts) (*AnthropicClient, error) {
@@ -61,7 +60,7 @@ func (c *AnthropicClient) Chat(ctx context.Context, req *ChatRequest) (ChatRespo
 	}
 
 	return ChatResponse{
-		Message: types.Message{
+		Message: core.Message{
 			Content: res.Content[0].Text,
 		},
 	}, nil

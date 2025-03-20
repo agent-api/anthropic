@@ -1,12 +1,10 @@
-github.com/agent-api/core v0.0.0-20250213143732-77b2a39cf1f9 h1:bxpmrZmFlrhXZrs3lKnCMa/8jLYji9QD8LhK4wNjfUU=
-github.com/agent-api/core v0.0.0-20250213143732-77b2a39cf1f9/go.mod h1:dubJb1P6cSuYOqQvBX/R9inWvHPMDuXCEwqwZfzXWTk=
 github.com/agent-api/core v0.0.0-20250223175956-2857a6b184d4 h1:8wHf0Y1Cul2XLA9BHow44DYGk3TaeSeabXkdA9jGnyw=
 github.com/agent-api/core v0.0.0-20250223175956-2857a6b184d4/go.mod h1:dubJb1P6cSuYOqQvBX/R9inWvHPMDuXCEwqwZfzXWTk=
-github.com/anthropics/anthropic-sdk-go v0.2.0-alpha.11 h1:O3/AMObKntZyu1KH6Xks6E0gbE8w6HVaKHE+/vXARzM=
-github.com/anthropics/anthropic-sdk-go v0.2.0-alpha.11/go.mod h1:GJxtdOs9K4neo8Gg65CjJ7jNautmldGli5/OFNabOoo=
+github.com/agent-api/core v0.0.0-20250320002200-9e435dd4d404 h1:YcnYeqObLUluLR3FRsFz+DN81zEzqfeWj1B6Dr/O8ds=
+github.com/agent-api/core v0.0.0-20250320002200-9e435dd4d404/go.mod h1:cs19K4yBM1F+VAJfR2mNGsNaQABqpAadgkIqQM0Hc0M=
+github.com/anthropics/anthropic-sdk-go v0.2.0-alpha.13 h1:xXipLb6/J8hP0GqKPBqK9mBa8nO8KbJWNI4CGx3rYmY=
+github.com/anthropics/anthropic-sdk-go v0.2.0-alpha.13/go.mod h1:GJxtdOs9K4neo8Gg65CjJ7jNautmldGli5/OFNabOoo=
 github.com/tidwall/gjson v1.14.2/go.mod h1:/wbyibRr2FHMks5tjHJ5F8dMZh3AcwJEMf5vlfC0lxk=
-github.com/tidwall/gjson v1.14.4 h1:uo0p8EbA09J7RQaflQ1aBRffTR7xedD2bcIVSYxLnkM=
-github.com/tidwall/gjson v1.14.4/go.mod h1:/wbyibRr2FHMks5tjHJ5F8dMZh3AcwJEMf5vlfC0lxk=
 github.com/tidwall/gjson v1.18.0 h1:FIDeeyB800efLX89e5a8Y0BNH+LOngJyGrIWxG2FKQY=
 github.com/tidwall/gjson v1.18.0/go.mod h1:/wbyibRr2FHMks5tjHJ5F8dMZh3AcwJEMf5vlfC0lxk=
 github.com/tidwall/match v1.1.1 h1:+Ho715JplO36QYgwN9PGYNhgZvoUSc9X2c80KVTi+GA=
