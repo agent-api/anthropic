@@ -32,22 +32,28 @@ type ProviderOpts struct {
 }
 
 // NewProvider creates a new Ollama provider
-func NewProvider(opts *ProviderOpts) *Provider {
+func NewProvider(opts *ProviderOpts) (*Provider, error) {
 	ctx := context.Background()
 	opts.Logger.Info("Creating new anthropic provider")
 
-	client, err := client.NewClient(ctx, &client.AnthropicClientOpts{
+	clientOpts := &client.AnthropicClientOpts{
 		Model:  models.CLAUDE_3_5_SONNET,
 		Logger: opts.Logger,
-	})
+	}
+
+	if opts.APIKey != "" {
+		clientOpts.APIKey = opts.APIKey
+	}
+
+	client, err := client.NewClient(ctx, clientOpts)
 	if err != nil {
-		panic(err)
+		return nil, fmt.Errorf("error creating anthropic client: %w", err)
 	}
 
 	return &Provider{
 		client: client,
 		logger: *opts.Logger,
-	}
+	}, nil
 }
 
 func (p *Provider) GetCapabilities(ctx context.Context) (*core.Capabilities, error) {
