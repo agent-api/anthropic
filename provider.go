@@ -34,6 +34,10 @@ type ProviderOpts struct {
 // NewProvider creates a new Ollama provider
 func NewProvider(opts *ProviderOpts) (*Provider, error) {
 	ctx := context.Background()
+	if opts.Logger == nil {
+		opts.Logger = slog.Default()
+	}
+
 	opts.Logger.Info("Creating new anthropic provider")
 
 	clientOpts := &client.AnthropicClientOpts{
@@ -52,6 +56,7 @@ func NewProvider(opts *ProviderOpts) (*Provider, error) {
 
 	return &Provider{
 		client: client,
+		model:  clientOpts.Model,
 		logger: *opts.Logger,
 	}, nil
 }
